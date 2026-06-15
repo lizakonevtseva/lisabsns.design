@@ -1,0 +1,123 @@
+/* ── Home portfolio (scrollable projects on the right) ──── */
+
+.home-portfolio-scroll {
+  position: fixed;
+  top: 0;
+  left: clamp(15rem, 30vw, 26rem);
+  right: 15px;
+  bottom: 0;
+  z-index: 2;
+  overflow-y: auto;
+  overflow-x: visible;
+  padding-bottom: 50vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  pointer-events: auto;
+  overscroll-behavior: contain;
+}
+
+.home-portfolio-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.home-portfolio-item {
+  pointer-events: none;
+}
+
+.home-portfolio-item + .home-portfolio-item {
+  margin-top: 60px;
+}
+
+.home-portfolio-item__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 503px;
+  column-gap: 100px;
+  align-items: start;
+  pointer-events: auto;
+}
+
+.home-portfolio__meta {
+  flex-shrink: 0;
+  transform: translateX(220px);
+  padding-top: 0;
+  pointer-events: none;
+}
+
+.home-portfolio__header {
+  font-size: 0.8125rem;
+  line-height: 0.98;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #313131;
+  transform: translateX(20px);
+  max-width: 14rem;
+}
+
+.home-portfolio__header span {
+  display: block;
+}
+
+.home-portfolio__header span + span {
+  margin-top: 0;
+}
+
+.home-portfolio__tags {
+  margin-top: 20px;
+  transform: translateX(140px);
+  font-size: calc(0.8125rem / 1.25);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  font-weight: 200;
+  color: #313131;
+}
+
+.home-portfolio__tags span {
+  display: block;
+}
+
+.home-portfolio {
+  width: 503px;
+  height: 325px;
+  justify-self: end;
+}
+
+.home-portfolio__frame {
+  width: 503px;
+  height: 325px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: default;
+}
+
+.home-portfolio__frame::-webkit-scrollbar {
+  display: none;
+}
+
+.home-portfolio__frame.is-next {
+  cursor: e-resize;
+}
+
+.home-portfolio__frame.is-prev {
+  cursor: w-resize;
+}
+
+.home-portfolio__track {
+  display: flex;
+  width: max-content;
+  height: 325px;
+}
+
+.home-portfolio__track img {
+  flex: 0 0 503px;
+  width: 503px;
+  height: 325px;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}

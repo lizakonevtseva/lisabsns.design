@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "id": "01",
+      "image": "imgs/personalwork1.png",
+      "alt": "Personal work 01",
+      "x": 36,
+      "y": 6,
+      "width": 17,
+      "rotate": -1.5,
+      "zIndex": 2,
+      "link": ""
+    },
+    {
+      "id": "02",
+      "image": "imgs/personalwork2.png",
+      "alt": "Personal work 02",
+      "x": 56,
+      "y": 10,
+      "width": 15,
+      "rotate": 2,
+      "zIndex": 1,
+      "link": ""
+    },
+    {
+      "id": "03",
+      "image": "imgs/personalwork3.png",
+      "alt": "Personal work 03",
+      "x": 40,
+      "y": 34,
+      "width": 16,
+      "rotate": 0.5,
+      "zIndex": 3,
+      "link": ""
+    },
+    {
+      "id": "04",
+      "image": "imgs/personalwork4.jpg",
+      "alt": "Personal work 04",
+      "x": 60,
+      "y": 38,
+      "width": 14,
+      "rotate": -2,
+      "zIndex": 4,
+      "link": ""
+    },
+    {
+      "id": "05",
+      "image": "imgs/personalwork5.png",
+      "alt": "Personal work 05",
+      "x": 46,
+      "y": 58,
+      "width": 18,
+      "rotate": 1.5,
+      "zIndex": 5,
+      "link": ""
+    }
+  ]
+}

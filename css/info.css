@@ -1,0 +1,80 @@
+/* ── Info page ────────────────────────────────────────────── */
+
+.page-info .hero__inner {
+  max-width: min(92vw, 72rem);
+}
+
+.page-info .hero__row {
+  align-items: flex-start;
+}
+
+.info-content {
+  flex: 0 1 24rem;
+  max-width: 24rem;
+  padding-top: 0.25rem;
+  margin-left: calc(clamp(1.5rem, 5vw, 3.5rem) + 200px);
+  transform: translateY(-30px);
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #313131;
+}
+
+.info-content p {
+  line-height: 95%;
+}
+
+.info-content p + p {
+  margin-top: 1.6em;
+}
+
+.info-contact {
+  margin-top: calc(2rem + 40px);
+  margin-left: 150px;
+}
+
+.info-contact__label {
+  display: block;
+  font-weight: 300;
+}
+
+.info-contact__email {
+  display: block;
+  margin-top: 0.1rem;
+  font-weight: 400;
+  color: #313131;
+  cursor: pointer;
+}
+
+.info-vinyl {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 10;
+  width: clamp(5.5rem, 11vw, 7.5rem);
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.info-vinyl:hover {
+  opacity: 0.75;
+}
+
+.info-vinyl img {
+  width: 100%;
+  height: auto;
+  display: block;
+  animation: vinyl-spin 8s linear infinite;
+}
+
+@keyframes vinyl-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

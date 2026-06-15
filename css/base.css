@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-text: #313131;
+  --color-bg: #ffffff;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+  --page-padding: clamp(1.25rem, 3vw, 2.5rem);
+  --texture-opacity: 0.5;
+  --texture-size: 88%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-mono);
+  color: #313131;
+  background: var(--color-bg);
+  overflow-x: hidden;
+}
+
+a {
+  color: #313131;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.45;
+}
+
+/* ── Full-screen texture (all pages) ──────────────────────── */
+
+.texture {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("../imgs/texture.png");
+  background-size: var(--texture-size);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: var(--texture-opacity);
+}
+
+/* ── Back link (info & work pages) ────────────────────────── */
+
+.back-link {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #313131;
+}
+
+/* ── Top-right navigation ─────────────────────────────────── */
+
+.nav-top {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #313131;
+}
+
+/* ── Bottom-left contacts ─────────────────────────────────── */
+
+.nav-contacts {
+  position: fixed;
+  bottom: calc(var(--page-padding) + 140px);
+  left: 20px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #313131;
+}
+
+/* ── Generic page content ───────────────────────────────────── */
+
+.page {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: calc(var(--page-padding) + 3rem) var(--page-padding);
+}

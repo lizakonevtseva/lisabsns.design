@@ -1,0 +1,84 @@
+/* ── Personal Work page ───────────────────────────────────── */
+
+.page-work .hero {
+  pointer-events: none;
+}
+
+.page-work .hero * {
+  pointer-events: auto;
+}
+
+.work-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.work-item {
+  position: absolute;
+  pointer-events: auto;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  transform-origin: center center;
+  transition: box-shadow 0.25s ease;
+}
+
+.work-item:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.work-item.is-dragging {
+  cursor: grabbing;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+}
+
+.work-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
+.work-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.92);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.work-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.work-lightbox img {
+  max-width: min(90vw, 52rem);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.work-lightbox__close {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #313131;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+}

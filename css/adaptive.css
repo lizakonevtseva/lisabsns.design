@@ -219,6 +219,19 @@
     margin-top: 2rem;
   }
 
+  /* Home — allow vertical page scroll over photo containers */
+  .page-home .home-portfolio-scroll,
+  .page-home .home-portfolio-item__inner,
+  .page-home .home-portfolio,
+  .page-home .home-portfolio__frame {
+    touch-action: pan-y;
+  }
+
+  .page-home .home-portfolio__frame {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
   /* Info — mobile only: hide bottom social links */
   .page-info .nav-contacts {
     display: none;
